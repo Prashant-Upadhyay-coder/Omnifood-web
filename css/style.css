@@ -50,12 +50,15 @@ Default :9px;
 }
 html{
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 body{
     font-family: "Rubik", sans-serif;
     line-height: 1;
     font-weight: 400;
     color: #555;
+    overflow-x: hidden;
+   
 }
 
 /*************************/
@@ -69,6 +72,7 @@ body{
     align-items: center;
     background-color: #fdf2e9;
     justify-content: space-between;
+    position: relative;
     height: 9.6rem;
     padding: 0 4.8rem;
 }
@@ -85,7 +89,7 @@ body{
 .main-nav-link:visited{
     display: inline-block;
     text-decoration: none;
-    color: #888;
+    color: #333;
     font-weight: 500;
     font-size: 1.8rem;
     transition: all 0.3s;
@@ -108,17 +112,49 @@ body{
 .nav-cta:active{
     background-color:#cf711f
 }
-
+.btn-mobile-nav{
+    border:none;
+    background: none;
+    cursor: pointer;
+    display: none;
+}
+.icon-mobile-nav{
+ height: 4.8rem;
+ width: 4.8rem;
+ color:#333;
+}
+.icon-mobile-nav[name="close-outline"]{
+ display: none;
+}
+.sticky .header{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;  
+    background-color: rgba(255, 255, 255, 0.97);
+    z-index: 999;
+    height: 8rem;
+    padding-top: 0;
+    padding-bottom: 0;
+    box-shadow: 0 1.2rem 3.2rem rgb(0, 0, 0 ,0.03);
+    
+}
+.sticky .section-hero{
+    margin-top: 7.6rem;
+}
 /*************************/
 /*  Hero-section */
 /*************************/
+
+
 .section-hero{
     background-color: #fdf2e9;
     padding: 4.8rem 0 9.6rem 0;
 }
+
 .hero{
     max-width: 130rem;
-    padding: 3.2rem;
+    padding: 0 3.2rem;
     margin:0 auto;
     display: grid;
     gap:8.6rem;
@@ -205,7 +241,7 @@ margin-bottom: 2.4rem;
     width: 36%;
 }
 .step-number{
-    font-size: 6.8rem;
+    font-size: 8.6rem;
     font-weight: 600;
     color: #ddd;
     margin-bottom: 1.2rem;
@@ -299,7 +335,7 @@ line-height: 1.8;
 .meal{
     border-radius: 1.1rem;
     overflow: hidden;
- transition: all 0.4s;
+    transition: all 0.4s;
     box-shadow: 0 2.4rem 4.8rem rgb(0, 0, 0, 0.075);
 }
 .meal:hover{
@@ -363,7 +399,7 @@ line-height: 1.8;
 }
 
 .gallery{
-padding: 1.6rem;
+    padding: 1.6rem;
     display: grid;
     grid-template-columns: repeat(3 ,1fr);
     gap: 1.6rem;

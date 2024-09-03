@@ -3,6 +3,7 @@
 /*************************/
 .container{
     max-width: 120rem;
+    padding: 0 3.2rem;
     margin: 0 auto;
 }
 .grid{
@@ -142,4 +143,5 @@ strong{
     display: flex;
     align-items: center;
     gap: 2rem;
+    line-height: 1.2;
 }
